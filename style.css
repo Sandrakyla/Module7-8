@@ -1,0 +1,38 @@
+/* Убираем отступы и задаем высоту страницы */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+/* Красивый градиентный фон */
+body {
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Контейнер для ссылок */
+.container {
+    text-align: center;
+}
+
+/* Стили для ссылок */
+.link {
+    display: block;
+    margin: 15px 0;
+    padding: 10px 20px;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+/* Эффект при наведении на ссылку */
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+}
