@@ -1,6 +1,6 @@
 function numberToWords(num) {
     if (num < 0) {
-        return `минус ${numberToWords(-num)}`; 
+        return `минус ${numberToWords(-num)}`;
     }
 
     const units = ["ноль", "один", "два", "три", "четыре", "пять", "шесть", "семь", "восемь", "девять"];
@@ -52,15 +52,23 @@ function initGame() {
     document.getElementById('orderNumberField').innerText = orderNumber;
     document.getElementById('answerField').innerText = getRandomQuestion(answerNumber);
 
-    $('#inputCollapse').collapse('hide');
-    $('#gameCollapse').collapse('show');
+
+    const inputCollapse = new bootstrap.Collapse(document.getElementById('inputCollapse'), { toggle: false });
+    const gameCollapse = new bootstrap.Collapse(document.getElementById('gameCollapse'), { toggle: false });
+
+    inputCollapse.hide();
+    gameCollapse.show();
 }
 
 document.getElementById('startGame').addEventListener('click', initGame);
 
 document.getElementById('btnRetry').addEventListener('click', function () {
-    $('#inputCollapse').collapse('show');
-    $('#gameCollapse').collapse('hide');
+
+    const inputCollapse = new bootstrap.Collapse(document.getElementById('inputCollapse'), { toggle: false });
+    const gameCollapse = new bootstrap.Collapse(document.getElementById('gameCollapse'), { toggle: false });
+
+    inputCollapse.show();
+    gameCollapse.hide();
 });
 
 document.getElementById('btnLess').addEventListener('click', function () {
